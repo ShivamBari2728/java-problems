@@ -89,7 +89,6 @@
 39. Check if two given strings/arrays are anagrams.
 40. Check if two matrices are identical (compare all elements).
 41. Print a 2D array/matrix in spiral order.
-<img width="100" height="100" alt="image" src="https://github.com/user-attachments/assets/fb6a09d0-ab9e-491c-95e9-67f4739c53a5" />
 42. Find the row in a matrix with the maximum number of 0s.
 43. Find a target value in a 2D matrix (given rowCount, columnCount); return coordinates, else `(-1,-1)`.
 44. Generate all Pythagorean triples smaller than a given limit.
