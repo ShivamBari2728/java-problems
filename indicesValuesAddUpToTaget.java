@@ -12,16 +12,12 @@
 public class indicesValuesAddUpToTaget {
 
     public static void main(String[] args) {
-        int[] nums = {2,11,7,15,8,1};
+        int[] nums = {2,11,7,15,8,1,12,-3};
         int target = 9;
         for(int i=0;i<nums.length -1;i++){
-            if(nums[i] > target){
-                continue;
-            }
+
             for(int j = i+1 ; j<nums.length;j++){
-                if(nums[j] > target){
-                    continue;
-                }
+
                 if(
                     (nums[i] + nums [j]) == target
                 ){
