@@ -7,7 +7,7 @@ import java.util.ArrayDeque;
 public class removeStarsFromString {
 
     public static void main(String[] args) {
-        String s = "erase*****";
+        String s = "abb*cdfg*****x*";
         ArrayDeque<Character> stack = new ArrayDeque<>();
         int starcount = 0;
         StringBuilder st = new StringBuilder();
@@ -17,18 +17,23 @@ public class removeStarsFromString {
         while (stack.size() > 0) {
             if (stack.peek() == '*') {
                 while (stack.peek() != null && stack.peek() == '*') {
-                    stack.pop();
+                   System.out.println("popped " +stack.pop());
                     starcount++;
                 }
             }
 
             if (starcount > 0) {
                 while (starcount != 0) {
-                    stack.pop();
+                   if(stack.pop() == '*'){
+                    starcount++;
+                   }else{
                     starcount--;
+                   }
+                    
                 }
             }
-            if(stack.peek() != null){
+            if(stack.peek() != null && stack.peek()!= '*'){
+                System.out.println("pushed to  st "+stack.peek());
                 st.append(stack.pop());
             }
             
