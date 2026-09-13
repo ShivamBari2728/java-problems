@@ -23,6 +23,10 @@ import java.util.Arrays;
  * above).
  */
 
+
+ // my approth chooses minimum value from give 2 option which is not entirely correct approth. 
+
+
 public class triangleQuestion {
     public static int findpath(int i, int j, List<List<Integer>> triangle) {
     int result = 0;
