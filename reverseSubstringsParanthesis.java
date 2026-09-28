@@ -51,7 +51,7 @@ public class reverseSubstringsParanthesis {
 
                         //took help of ai for below line as my index chnges after deleting the paranthesis..
                         i = startpointer - 1;
-                        
+
                         break;
                     }
                 }
@@ -62,3 +62,31 @@ public class reverseSubstringsParanthesis {
 
     }
 }
+
+/*
+Faster solution
+
+class Solution {
+    public String reverseParentheses(String s) {
+        Stack<StringBuilder>stack = new Stack<>();
+        StringBuilder curr = new StringBuilder();
+        for(char ch:s.toCharArray()){
+            if(ch=='('){
+                stack.push(curr);
+                curr = new StringBuilder();
+            }
+            else if(ch==')'){
+                curr.reverse();
+                StringBuilder temp = stack.pop();
+                temp.append(curr);
+                curr = temp;
+            }
+            else{
+                curr.append(ch);
+            }
+        }
+        return curr.toString();
+    }
+}
+
+*/
